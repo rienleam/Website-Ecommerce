@@ -8,46 +8,123 @@ const dom_adjustProduct_dialog = document.querySelector("#adjust-products-dialog
 //data
 let products = [
     {
+        brandname: "Huawei",
+        model: "Huawei Nova 10 Pro",
+        price: "650",
+        storage: "256",
+        photoimage: "../Image/huaweinova10pro.jpg"
+    },
+    {
+        brandname: "Huawei",
+        model: "Huawei Nova 9",
+        price: "550",
+        storage: "128",
+        photoimage: "../Image/hueweinova9.jpg"
+    },
+    {
         brandname: "Apple",
-        model: "Iphone 14 pro",
-        price: "650.00",
-        description: "Storage 128G",
+        model: "Iphone 13",
+        price: "750",
+        storage: "512",
+        photoimage: "../Image/iphone13.jfif"
+    },
+    {
+        brandname: "Apple",
+        model: "Iphone 14 Pro Max",
+        price: "950",
+        storage: "512",
+        photoimage: "../Image/iphone14promax.jpg"
     },
     {
         brandname: "Nokia",
-        model: "Iphone 14 pro",
-        price: "650.00",
-        description: "Storage 128G"
+        model: "Nokia G50",
+        price: "470",
+        storage: "64",
+        photoimage: "../Image/nokiag50.jpg"
+    },
+    {
+        brandname: "Oppo",
+        model: "Oppo A12",
+        price: "590",
+        storage: "128",
+        photoimage: "../Image/oppoa12.jpg"
+    },
+    {
+        brandname: "Oppo",
+        model: "Oppo F21 Pro",
+        price: "620",
+        storage: "128",
+        photoimage: "../Image/oppof21pro.jpg"
     },
     {
         brandname: "Sumsung",
-        model: "Iphone 14 pro",
-        price: "650.00",
-        description: "Storage 128G"
-    },
-    {
-        brandname: "Huawei",
-        model: "Iphone 14 pro",
-        price: "650.00",
-        description: "Storage 128G"
+        model: "Sumsung A52 5G",
+        price: "720",
+        storage: "256",
+        photoimage: "../Image/sumsunga52.jpg"
     },
     {
         brandname: "Sumsung",
-        model: "Iphone 14 pro",
-        price: "650.00",
-        description: "Storage 128G"
+        model: "Sumsung M13 5G",
+        price: "780",
+        storage: "256",
+        photoimage: "../Image/sumsungm13.jpg"
     },
     {
-        brandname: "Huawei",
-        model: "Iphone 14 pro",
-        price: "650.00",
-        description: "Storage 128G"
+        brandname: "Xiaomi",
+        model: "Xiaomi 11T",
+        price: "580",
+        storage: "128",
+        photoimage: "../Image/xiaomi11t.jpg"
+    },
+    {
+        brandname: "Xiaomi",
+        model: "Xiaomi 12 Pro",
+        price: "720",
+        storage: "256",
+        photoimage: "../Image/xiaomi12pro.jpg"
+    },
+    {
+        brandname: "Xiaomi",
+        model: "Redmi Note 10 Pro",
+        price: "890",
+        storage: "512",
+        photoimage: "../Image/xiaomiredminote10pro.jpg"
+    },
+    {
+        brandname: "Vivo",
+        model: "Vivo X60 Pro",
+        price: "780",
+        storage: "256",
+        photoimage: "../Image/vivox60pro.jpg"
+    },
+    {
+        brandname: "Vivo",
+        model: "Vivo X60t",
+        price: "710",
+        storage: "256",
+        photoimage: "../Image/vivox60t.jpg"
+    },
+    {
+        brandname: "Vivo",
+        model: "Vivo 73t",
+        price: "670",
+        storage: "128",
+        photoimage: "../Image/vivoy73t.jpg"
+    },
+    {
+        brandname: "Vivo",
+        model: "Vivo Y74s",
+        price: "700",
+        storage: "128",
+        photoimage: "../Image/vivoy74s.jpg"
     }
 ]
 
 let indexItem = products.length;
 
 //function show and hide element
+
 function hide(element) {
     element.style.display = "none";
 }
@@ -70,6 +147,7 @@ function loadPhone() {
 
 function renderPhone() {
     // Remove the card container and create a new one
+
     document.querySelector(".product-display").remove();
   
     dom_products_display = document.createElement("div");
@@ -77,7 +155,8 @@ function renderPhone() {
   
     dom_products_view.appendChild(dom_products_display);
   
-    // 2 - For all products,  create a new div and append it the container
+    // For all phone,  create a new div and append it the container
+
     for (let index = 0; index < products.length; index++) {
         let product = products[index];
         var num = index + 1;
@@ -91,10 +170,10 @@ function renderPhone() {
         product_info.className = "product-info";
         main_content.appendChild(product_info);
     
-        let number = document.createElement("h2");
-        number.id = "number";
-        number.textContent = num;
-        product_info.appendChild(number);
+        let picture = document.createElement("img");
+        picture.id = "picture";
+        picture.src = product.photoimage;
+        product_info.appendChild(picture);
     
         let infor = document.createElement("div");
         infor.className = "infor";
@@ -115,10 +194,10 @@ function renderPhone() {
         price.textContent = "Price: $" + product.price;
         infor.appendChild(price);
 
-        let description = document.createElement("p");
-        description.id = "description";
-        description.textContent = "Description: " + product.description;
-        infor.appendChild(description);
+        let storage = document.createElement("p");
+        storage.id = "storage";
+        storage.textContent = "Storage: " + product.storage + "G";
+        infor.appendChild(storage);
 
         let delete_update = document.createElement("div");
         delete_update.className = "adjust";
@@ -151,16 +230,17 @@ function editPhone(event) {
 
     document.querySelector("#brand").value = product.brandname;
     document.querySelector("#model").value = product.model;
-    document.querySelector("#cost").value = product.price;
-    document.querySelector("#description").value = product.description;
+    document.querySelector("#price").value = product.price;
+    document.querySelector("#storage").value = product.storage;
+    document.querySelector("#photo").value = product.photoimage;
 
     // Show the dialog
 
     show(dom_adjustProduct_dialog);
     document.querySelector("#addnewPhone").textContent = "Update";
+    document.querySelector("#form-title").textContent = "Edit your phone";
     
     products.splice(index, 1);
- 
 }
 
 function removePhone(event) {
@@ -184,9 +264,10 @@ function onAddnewPhone() {
     document.querySelector("#addnewPhone").textContent = "Add new";
     document.querySelector("#brand").value = "";
     document.querySelector("#model").value = "";
-    document.querySelector("#cost").value = "";
-    document.querySelector("#description").value = "";
+    document.querySelector("#price").value = "";
+    document.querySelector("#storage").value = "";
     document.querySelector("#photo").value = "";
+    document.querySelector("#message").remove();
 
     indexItem = products.length;
 }
@@ -199,28 +280,52 @@ function onCancel() {
 
 function onCreatPhone() {
 
-    hide(dom_adjustProduct_dialog);
+    let get_brand = document.querySelector("#brand");
+    let get_model = document.querySelector("#model");
+    let get_cost = document.querySelector("#price");
+    let get_storage = document.querySelector("#storage");
+    let get_photo = document.querySelector("#photo");
 
-    let get_brand = document.querySelector("#brand").value;
-    let get_model = document.querySelector("#model").value;
-    let get_cost = document.querySelector("#cost").value;
-    let get_description = document.querySelector("#description").value;
-    let get_photo = document.querySelector("#photo").value;
-    let check_userinput = get_brand && get_model && get_cost && get_description && get_photo;
+    let check_userinput = get_brand.value && get_model.value && get_cost.value && get_storage.value && get_photo.value;
+    let input_field = [get_brand, get_model, get_cost, get_storage, get_photo];
 
     if (!(check_userinput)) {
-        window.alert("You must complete all inputs!");
-    }else{
+        for (let input of input_field) {
+            if (! (input.value)){
+                input.style.border = "2px solid red";
+            }
+            else {
+                input.style.border = "2px solid gray";
+            }
+        }
+    }
+    if (get_cost.value < 300 && get_cost.value > 2500) {
+        let message = document.createElement("p");
+        message.id = "message";
+        message.textContent = "The price must be between 300 and 2500!";
+        document.querySelector(".userinput-price").appendChild(message);
+    }
+    else{
         let add_products = {};
         add_products.brandname = document.querySelector("#brand").value;
         add_products.model = document.querySelector("#model").value;
-        add_products.price = document.querySelector("#cost").value;
-        add_products.description = document.querySelector("#description").value;
+        add_products.price = document.querySelector("#price").value;
+        add_products.storage = document.querySelector("#storage").value;
+        add_products.photoimage = document.querySelector("#photo").value;
 
         products.splice(indexItem, 0, add_products);
+        hide(dom_adjustProduct_dialog);
     }
 
-    // products.push(add_products);
+    // let add_products = {};
+    // add_products.brandname = document.querySelector("#brand").value;
+    // add_products.model = document.querySelector("#model").value;
+    // add_products.price = document.querySelector("#price").value;
+    // add_products.storage = document.querySelector("#storage").value;
+    // add_products.photoimage = document.querySelector("#photo").value;
+
+    // products.splice(indexItem, 0, add_products);
+    // hide(dom_adjustProduct_dialog);
     
     savePhone();
     renderPhone();

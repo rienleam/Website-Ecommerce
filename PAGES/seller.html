@@ -15,76 +15,75 @@
             <div class="logo">
                 <img src="../Image/mynewlogo.png">
                 <div class="manupage">
-                    <p><a href="seller.html">Seller</a></p>
+                    <p><a class="active" href="seller.html">Seller</a></p>
                     <p><a href="customer.html">Customer</a></p>
                 </div>
             </div>
         </div>
         <div class="nav-right">
-            <a href="">My Card</a>
+            <a href="../PAGES/mycard.html">My Card</a>
             <img src="../Image/profile.jpg">
         </div>
     </nav>
     <aside>
-        <h1>My products</h1>
+        <h1>My Phones</h1>
         <button id="addnew">Add new products</button>
     </aside>
     <div id="adjust-products-dialog" style="display: none;">
-        <dialog open>
-            <h1>Add new Phone</h1>
-            <section>
-                <div class="userinput">
-                    <label>Brand:</label>
-                    <select name="brand" id="brand" required>
-                        <option value="" selected disabled>Select your phone brand</option>
-                        <option value="Apple">Apple</option>
-                        <option value="Sumsung">Sumsung</option>
-                        <option value="Oppo">Oppo</option>
-                        <option value="Vivo">Vivo</option>
-                        <option value="Huawei">Huawei</option>
-                        <option value="Nokia">Nokia</option>
-                        <option value="Xiaomi">Xiaomi</option>
-                    </select>
+        <div class="dialog-container">
+            <dialog open>
+                <h1 id="form-title">Add new Phone</h1>
+                <section>
+                    <div class="userinput-brand">
+                        <label>Brand:</label>
+                        <select name="brand" id="brand" required>
+                            <option value="" selected disabled>Select your phone brand</option>
+                            <option value="Apple">Apple</option>
+                            <option value="Sumsung">Sumsung</option>
+                            <option value="Oppo">Oppo</option>
+                            <option value="Vivo">Vivo</option>
+                            <option value="Huawei">Huawei</option>
+                            <option value="Nokia">Nokia</option>
+                            <option value="Xiaomi">Xiaomi</option>
+                        </select>
+                    </div>
+                    <div class="userinput-model">
+                        <label>Model:</label>
+                        <input id="model" type="text" placeholder="Enter phone's Model" aria-required="false">
+                    </div>
+                    <div class="userinput-price">
+                        <label>Price:</label>
+                        <input id="price" type="number" placeholder="Enter phone's Cost with US dolla ($) currency" required>
+                    </div>
+                    <div class="userinput-storage">
+                        <label>Storage:</label>
+                        <select name="storage" id="storage" required>
+                            <option value="" selected disabled>Select your phone storage</option>
+                            <option value="32">32G</option>
+                            <option value="64">64G</option>
+                            <option value="128">128G</option>
+                            <option value="256">256G</option>
+                            <option value="512">512G</option>
+                        </select>
+                    </div>
+                    <div class="userinput-photo">
+                        <label>Phone Image:</label>
+                        <!-- <input id="photo" type="file" placeholder="Input phone's picture" required/> -->
+                        <input id="photo" type="text" placeholder="Input phone's picture" required/>
+                    </div>
+                </section>
+                <div class="choose">
+                    <button id="cancel" type="submit">Cancel</button>
+                    <button id="addnewPhone" type="submit">Add new</button> 
                 </div>
-                <div class="userinput">
-                    <label>Model:</label>
-                    <input id="model" type="text" placeholder="Enter phone's Model" required/>
-                </div>
-                <div class="userinput">
-                    <label>Price:</label>
-                    <input id="cost" type="number" placeholder="Enter phone's Cost with currency $" required/>
-                </div>
-                <div class="userinput">
-                    <label>Description:</label>
-                    <input id="description" type="text" placeholder="Describe more" required/>
-                </div>
-                <div class="userinput-last">
-                    <span>Phone Image:</span>
-                    <input id="photo" type="file" placeholder="Input phone's picture" required/>
-                </div>
-            </section>
-            <div class="choose">
-                <button id="cancel">Cancel</button>
-                <button id="addnewPhone">Add new</button> 
-            </div>
-        </dialog>
-    </div>
-    <div class="title">
-        <div class="all-titles">
-            <div class="title-left">
-                <h2>Number</h2>
-                <h2 id="top-title">Products information</h2>
-            </div>
-            <div class="title-right">
-                <h2>Action</h2>
-            </div>
+            </dialog>
         </div>
     </div>
     <div class="products-view">
         <div class="product-display">
             <!-- <div class="main-content">
                 <div class="product-info">
-                    <h2 id="number">1</h2>
+                    <img id="picture" src="">
                     <div class="infor">
                         <h3 id="brandname">Apple</h3>
                         <p></p>

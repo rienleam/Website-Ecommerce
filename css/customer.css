@@ -1,17 +1,30 @@
 .search-bar {
     width: 100%;
-    height: 170px;
+    height: 370px;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 20px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background: url(../Image/back1.jpg);
+    /* background: url(../Image/background.jpg); */
+    background-size: cover;
+}
+.backgr {
+    width: 85%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#logoshop {
+    width: 350px;
 }
 .search{
     width: 80%;
-    height: 60px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .search-input{
     width: 80%;
@@ -23,6 +36,7 @@
     width: 84%;
     padding: 20px;
     font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     border: 2px solid gray;
     border-right: 0;
     border-radius: 30px 0px 0px 30px;
@@ -32,6 +46,7 @@
     padding: 7px;
     border: 2px solid gray;
     border-radius: 0px 30px 30px 0px;
+    background-color: black;
 }
 .search-input img{
     width: 40px;
@@ -46,11 +61,13 @@
     width: 100%;
     padding: 20px;
     font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     border: 2px solid gray;
 }
 .main {
     width: 100%;
     display: flex;
+    margin-top: 30px;
 }
 .main-left {
     width: 15%;
@@ -58,11 +75,13 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgb(169, 212, 212);
+    background-color: rgb(119, 177, 177);
+    border-radius: 0px 10px 0px 0px;
 }
 .main-left h2{
     margin: 0;
     margin-top: 20px;
+    color: rgb(12, 91, 91);
 }
 .list {
     width: 50%;
@@ -73,11 +92,13 @@
 }
 .main-right {
     width: 85%;
+}
+.display-phonelist {
+    width: 100%;    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    /* background-color: rgb(6, 177, 177); */
 }
 .each-phone {
     width: 18%;
@@ -85,18 +106,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(169, 212, 212);
+    background-color: rgb(119, 177, 177);
     margin: 15px;
     padding: 20px;
-    /* border-radius: 15px; */
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .each-phone:hover{
-    background-color: rgb(68, 171, 171);   
+    background-color: rgb(78, 191, 191); 
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);  
 }
 #photo {
     width: 210px;
     height: 210px;
-    /* border-radius: 10px; */
+    border-radius: 10px;
 }
 .phone-info {
     width: 100%;
@@ -106,15 +131,15 @@
 }
 .phone-info h3{
     margin: 0;
+    margin-top: 10px;
+    color: rgb(34, 74, 74);
 }
 #price {
     margin: 0;
     margin-top: 10px;
     font-weight: bold;
-    font-size: 25px;
-}
-.phone-info h3{
-    margin-top: 10px;  
+    font-size: 35px;
+    color: black;
 }
 .rate {
     display: flex;
@@ -130,4 +155,7 @@
     padding: 10px;
     border: none;
     border-radius: 10px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: orange;
 }
