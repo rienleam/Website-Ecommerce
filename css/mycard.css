@@ -1,0 +1,16 @@
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 90px;
+}
+#clickadd {
+    padding: 15px 30px;
+    background-color: orange;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}

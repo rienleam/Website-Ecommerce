@@ -8,6 +8,34 @@ const dom_adjustProduct_dialog = document.querySelector("#adjust-products-dialog
 //data
 let products = [
     {
+        brandname: "Apple",
+        model: "Iphone 11",
+        price: "600",
+        storage: "64",
+        photoimage: "../Image/iphone11.jfif"
+    },
+    {
+        brandname: "Apple",
+        model: "Iphone 12",
+        price: "670",
+        storage: "128",
+        photoimage: "../Image/iphone12.jfif"
+    },
+    {
+        brandname: "Apple",
+        model: "Iphone 13",
+        price: "750",
+        storage: "512",
+        photoimage: "../Image/iphone13.jpg"
+    },
+    {
+        brandname: "Apple",
+        model: "Iphone 14 Pro Max",
+        price: "950",
+        storage: "512",
+        photoimage: "../Image/iphone14promax.jpg"
+    },
+    {
         brandname: "Huawei",
         model: "Huawei Nova 10 Pro",
         price: "650",
@@ -22,20 +50,6 @@ let products = [
         photoimage: "../Image/hueweinova9.jpg"
     },
     {
-        brandname: "Apple",
-        model: "Iphone 13",
-        price: "750",
-        storage: "512",
-        photoimage: "../Image/iphone13.jfif"
-    },
-    {
-        brandname: "Apple",
-        model: "Iphone 14 Pro Max",
-        price: "950",
-        storage: "512",
-        photoimage: "../Image/iphone14promax.jpg"
-    },
-    {
         brandname: "Nokia",
         model: "Nokia G50",
         price: "470",
@@ -44,7 +58,7 @@ let products = [
     },
     {
         brandname: "Oppo",
-        model: "Oppo A12",
+        model: "Oppo A21",
         price: "590",
         storage: "128",
         photoimage: "../Image/oppoa12.jpg"
@@ -159,7 +173,6 @@ function renderPhone() {
 
     for (let index = 0; index < products.length; index++) {
         let product = products[index];
-        var num = index + 1;
     
         let main_content = document.createElement("div");
         main_content.className = "main-content";
@@ -291,20 +304,20 @@ function onCreatPhone() {
 
     if (!(check_userinput)) {
         for (let input of input_field) {
-            if (! (input.value)){
+            if (!(input.value)){
                 input.style.border = "2px solid red";
             }
             else {
-                input.style.border = "2px solid gray";
+                input.style.border = "2px solid green";
             }
         }
     }
-    if (get_cost.value < 300 && get_cost.value > 2500) {
-        let message = document.createElement("p");
-        message.id = "message";
-        message.textContent = "The price must be between 300 and 2500!";
-        document.querySelector(".userinput-price").appendChild(message);
-    }
+    // if (get_cost.value < 300 && get_cost.value > 2500) {
+    //     let message = document.createElement("p");
+    //     message.id = "message";
+    //     message.textContent = "The price must be between 300 and 2500!";
+    //     document.querySelector(".userinput-price").appendChild(message);
+    // }
     else{
         let add_products = {};
         add_products.brandname = document.querySelector("#brand").value;
@@ -313,7 +326,7 @@ function onCreatPhone() {
         add_products.storage = document.querySelector("#storage").value;
         add_products.photoimage = document.querySelector("#photo").value;
 
-        products.splice(indexItem, 0, add_products);
+        products.splice(indexItem-indexItem, 0, add_products);
         hide(dom_adjustProduct_dialog);
     }
 
