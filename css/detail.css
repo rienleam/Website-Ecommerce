@@ -51,8 +51,7 @@ body {
     margin-bottom: 20px;
 }
 .phone-pic {
-    width: 20%;
-    /* height: 350px; */
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -74,7 +73,7 @@ body {
     font-size: 25px;
 }
 .phone-information {
-    width: 65%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -93,8 +92,8 @@ body {
 }
 .info p{
     margin: 0;
-    font-size: 17px;
-    padding-top: 8px;
+    font-size: 20px;
+    padding-top: 15px;
 }
 .buy-add {
     width: 100%;
@@ -126,6 +125,10 @@ body {
     margin-left: 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+#addto-card a{
+    text-decoration: none;
+    color: white;
+}
 
 .whenbuy-dialog {
     position: fixed;
@@ -140,9 +143,9 @@ body {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 30px;
-    width: 50%;
-    height: 500px;
+    top: 20px;
+    width: 55%;
+    height: 520px;
     z-index: 100;
     border-radius: 10px;
     border: none;
@@ -162,20 +165,33 @@ label {
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-input {
+input , select{
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     box-sizing: border-box;
     margin-bottom: 7px;
     font-size: 15px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.inputname{
+.userinput-name {
     display: flex;
     justify-content: space-between;
 }
-.inputname input{
-    width: 49.5%;
+
+.name-card, .card-number, .security, .inputname, .userinput-email, .userinput-phone, .userinput-address, .userinput-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inputname {
+    width: 80%;
+    flex-wrap: wrap;
+}
+#first-name, #last-name{
+    width: 100%;
+}
+#nameoncard, #numbercard, #securitycode, #email, #phone-num, #address, #card{
+    width: 80%;
 }
 .choice {
     width: 100%;

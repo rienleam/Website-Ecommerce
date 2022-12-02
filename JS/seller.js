@@ -10,128 +10,146 @@ let products = [
     {
         brandname: "Apple",
         model: "Iphone 11",
-        price: "600",
-        storage: "64",
-        photoimage: "../Image/iphone11.jfif"
+        price: 600,
+        storage: 64,
+        photoimage: "../Image/iphone11.jfif",
+        quantity: 1
     },
     {
         brandname: "Apple",
         model: "Iphone 12",
-        price: "670",
-        storage: "128",
-        photoimage: "../Image/iphone12.jfif"
+        price: 670,
+        storage: 128,
+        photoimage: "../Image/iphone12.jfif",
+        quantity: 1
     },
     {
         brandname: "Apple",
         model: "Iphone 13",
-        price: "750",
-        storage: "512",
-        photoimage: "../Image/iphone13.jpg"
+        price: 750,
+        storage: 512,
+        photoimage: "../Image/iphone13.jpg",
+        quantity: 1
     },
     {
         brandname: "Apple",
         model: "Iphone 14 Pro Max",
-        price: "950",
-        storage: "512",
-        photoimage: "../Image/iphone14promax.jpg"
+        price: 950,
+        storage: 512,
+        photoimage: "../Image/iphone14promax.jpg",
+        quantity: 1
     },
     {
         brandname: "Huawei",
         model: "Huawei Nova 10 Pro",
-        price: "650",
-        storage: "256",
-        photoimage: "../Image/huaweinova10pro.jpg"
+        price: 650,
+        storage: 256,
+        photoimage: "../Image/huaweinova10pro.jpg",
+        quantity: 1
     },
     {
         brandname: "Huawei",
         model: "Huawei Nova 9",
-        price: "550",
-        storage: "128",
-        photoimage: "../Image/hueweinova9.jpg"
+        price: 550,
+        storage: 128,
+        photoimage: "../Image/hueweinova9.jpg",
+        quantity: 1
     },
     {
         brandname: "Nokia",
         model: "Nokia G50",
-        price: "470",
-        storage: "64",
-        photoimage: "../Image/nokiag50.jpg"
+        price: 470,
+        storage: 64,
+        photoimage: "../Image/nokiag50.jpg",
+        quantity: 1
     },
     {
         brandname: "Oppo",
         model: "Oppo A21",
-        price: "590",
-        storage: "128",
-        photoimage: "../Image/oppoa12.jpg"
+        price: 590,
+        storage: 128,
+        photoimage: "../Image/oppoa12.jpg",
+        quantity: 1
     },
     {
         brandname: "Oppo",
         model: "Oppo F21 Pro",
-        price: "620",
-        storage: "128",
-        photoimage: "../Image/oppof21pro.jpg"
+        price: 620,
+        storage: 128,
+        photoimage: "../Image/oppof21pro.jpg",
+        quantity: 1
     },
     {
         brandname: "Sumsung",
         model: "Sumsung A52 5G",
-        price: "720",
-        storage: "256",
-        photoimage: "../Image/sumsunga52.jpg"
+        price: 720,
+        storage: 256,
+        photoimage: "../Image/sumsunga52.jpg",
+        quantity: 1
     },
     {
         brandname: "Sumsung",
         model: "Sumsung M13 5G",
-        price: "780",
-        storage: "256",
-        photoimage: "../Image/sumsungm13.jpg"
+        price: 780,
+        storage: 256,
+        photoimage: "../Image/sumsungm13.jpg",
+        quantity: 1
     },
     {
         brandname: "Xiaomi",
         model: "Xiaomi 11T",
-        price: "580",
-        storage: "128",
-        photoimage: "../Image/xiaomi11t.jpg"
+        price: 580,
+        storage: 128,
+        photoimage: "../Image/xiaomi11t.jpg",
+        quantity: 1
     },
     {
         brandname: "Xiaomi",
         model: "Xiaomi 12 Pro",
-        price: "720",
-        storage: "256",
-        photoimage: "../Image/xiaomi12pro.jpg"
+        price: 720,
+        storage: 256,
+        photoimage: "../Image/xiaomi12pro.jpg",
+        quantity: 1
     },
     {
         brandname: "Xiaomi",
         model: "Redmi Note 10 Pro",
-        price: "890",
-        storage: "512",
-        photoimage: "../Image/xiaomiredminote10pro.jpg"
+        price: 890,
+        storage: 512,
+        photoimage: "../Image/xiaomiredminote10pro.jpg",
+        quantity: 1
     },
     {
         brandname: "Vivo",
         model: "Vivo X60 Pro",
-        price: "780",
-        storage: "256",
-        photoimage: "../Image/vivox60pro.jpg"
+        price: 780,
+        storage: 256,
+        photoimage: "../Image/vivox60pro.jpg",
+        quantity: 1
     },
     {
         brandname: "Vivo",
         model: "Vivo X60t",
-        price: "710",
-        storage: "256",
-        photoimage: "../Image/vivox60t.jpg"
+        price: 710,
+        storage: 256,
+        photoimage: "../Image/vivox60t.jpg",
+        quantity: 1
     },
     {
         brandname: "Vivo",
         model: "Vivo 73t",
-        price: "670",
-        storage: "128",
-        photoimage: "../Image/vivoy73t.jpg"
+        price: 670,
+        storage: 128,
+        photoimage: "../Image/vivoy73t.jpg",
+        quantity: 1
     },
     {
         brandname: "Vivo",
         model: "Vivo Y74s",
-        price: "700",
-        storage: "128",
-        photoimage: "../Image/vivoy74s.jpg"
+        price: 700,
+        storage: 128,
+        photoimage: "../Image/vivoy74s.jpg",
+        quantity: 1
     }
 ]
 
@@ -280,7 +298,6 @@ function onAddnewPhone() {
     document.querySelector("#price").value = "";
     document.querySelector("#storage").value = "";
     document.querySelector("#photo").value = "";
-    document.querySelector("#message").remove();
 
     indexItem = products.length;
 }
@@ -288,6 +305,20 @@ function onAddnewPhone() {
 function onCancel() {
     hide(dom_adjustProduct_dialog);
     products = JSON.parse(localStorage.getItem("products"));
+
+    let brand = document.querySelector("#brand");
+    let model = document.querySelector("#model");
+    let price = document.querySelector("#price");
+    let storage = document.querySelector("#storage");
+    let photo = document.querySelector("#photo");
+
+    let check_inputbox = [brand, model, price, storage, photo];
+
+    for (let input of check_inputbox) {
+        input.value = "";
+        input.style.border = "2px solid gray";
+    }
+
     renderPhone();
 }
 
@@ -312,12 +343,6 @@ function onCreatPhone() {
             }
         }
     }
-    // if (get_cost.value < 300 && get_cost.value > 2500) {
-    //     let message = document.createElement("p");
-    //     message.id = "message";
-    //     message.textContent = "The price must be between 300 and 2500!";
-    //     document.querySelector(".userinput-price").appendChild(message);
-    // }
     else{
         let add_products = {};
         add_products.brandname = document.querySelector("#brand").value;
@@ -329,17 +354,6 @@ function onCreatPhone() {
         products.splice(indexItem-indexItem, 0, add_products);
         hide(dom_adjustProduct_dialog);
     }
-
-    // let add_products = {};
-    // add_products.brandname = document.querySelector("#brand").value;
-    // add_products.model = document.querySelector("#model").value;
-    // add_products.price = document.querySelector("#price").value;
-    // add_products.storage = document.querySelector("#storage").value;
-    // add_products.photoimage = document.querySelector("#photo").value;
-
-    // products.splice(indexItem, 0, add_products);
-    // hide(dom_adjustProduct_dialog);
-    
     savePhone();
     renderPhone();
 }

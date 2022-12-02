@@ -34,7 +34,7 @@ dialog {
   flex-direction: column;
   position: fixed;
   top: 30px;
-  width: 45%;
+  width: 50%;
   height: 500px;
   z-index: 100;
   border-radius: 10px;
@@ -86,10 +86,11 @@ input{
 .choose{
   display: flex;
   justify-content: flex-end;
+  margin-top: 30px;
 }
 .choose button{
   padding: 10px 30px;
-  margin: 5px;
+  margin-left: 15px;
   background-color: orange;
   border: none;
   border-radius: 5px;

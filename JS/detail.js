@@ -1,5 +1,5 @@
 let list_phones =JSON.parse(localStorage.getItem("phonetodetails"));
-console.log(list_phones);
+
 let dom_allphones_list = document.querySelector(".list-phone-detail")
 
 let dom_buy_dialog = document.querySelector(".whenbuy-dialog")
@@ -13,28 +13,31 @@ function hide() {
 function show() {
     dom_buy_dialog.style.display = "block";
 }
+
+let first_name = document.querySelector("#first-name")
+let last_name = document.querySelector("#last-name");
+let email = document.querySelector("#email");
+let phone_num = document.querySelector("#phone-num");
+let address = document.querySelector("#address");
+let card = document.querySelector("#card");
+let nameoncard = document.querySelector("#nameoncard");
+let numbercard = document.querySelector("#numbercard");
+let securitycode = document.querySelector("#securitycode");
+
+
 function onCancel() {
 
     dom_buy_dialog.style.display = "none";
 
-    document.querySelector("#first-name").value = "";
-    document.querySelector("#last-name").value = "";
-    document.querySelector("#email").value = "";
-    document.querySelector("#phone-num").value = "";
-    document.querySelector("#address").value = "";
-    document.querySelector("#card").value = "";
+    let check_value = [first_name, last_name, email, phone_num, address, card, nameoncard, numbercard, securitycode];
+    for (let input of check_value) {
+        input.value = "";
+        input.style.border = "2px solid gray";
+    }
 }
 function buyyourPhone() {
-
-    let first_name = document.querySelector("#first-name")
-    let last_name = document.querySelector("#last-name");
-    let email = document.querySelector("#email");
-    let phone_num = document.querySelector("#phone-num");
-    let address = document.querySelector("#address");
-    let card = document.querySelector("#card");
-
-    let checked_input = first_name.value && last_name.value && email.value && phone_num.value && address.value && card.value;
-    let check_value = [first_name, last_name, email, phone_num, address, card];
+    let checked_input = first_name.value && last_name.value && email.value && phone_num.value && address.value && card.value && nameoncard.value && numbercard.value && securitycode.value;
+    let check_value = [first_name, last_name, email, phone_num, address, card, nameoncard, numbercard, securitycode];
 
     if (!(checked_input)) {
         for (let input of check_value) {
@@ -53,23 +56,16 @@ function buyyourPhone() {
         phone_num = document.querySelector("#phone-num").value;
         address = document.querySelector("#address").value;
         card = document.querySelector("#card").value;
-        hide();       
-        document.querySelector("#first-name").value = "";
-        document.querySelector("#last-name").value = "";
-        document.querySelector("#email").value = "";
-        document.querySelector("#phone-num").value = "";
-        document.querySelector("#address").value = "";
-        document.querySelector("#card").value = "";
-    }
+        nameoncard = document.querySelector("#nameoncard").value;
+        numbercard = document.querySelector("#numbercard").value;
+        securitycode = document.querySelector("#securitycode").value;
 
-    
+        onCancel();
+    }    
 }
 function createDetails(){
 
-    document.querySelector(".each-phones").remove();
-
-    dom_detail_info = document.createElement("div");
-    dom_detail_info.className = "each-phones";
+    dom_detail_info = document.querySelector(".each-phones");
 
     dom_allphones_list.appendChild(dom_detail_info);
 
@@ -90,7 +86,7 @@ function createDetails(){
         phone_image.src = phone.photoimage;
         phone_pic.appendChild(phone_image);
 
-        let title = document.createElement("h2");
+        let title = document.createElement("h1");
         title.className = "phone-name";
         title.textContent = phone.model;
         phone_pic.appendChild(title);
@@ -122,6 +118,10 @@ function createDetails(){
         let storage = document.createElement("p");
         storage.textContent = "Memory Storage Capacity: "+ phone.storage + "G";
         info.appendChild(storage);
+
+        let cellcular = document.createElement("p");
+        cellcular.textContent = "Cellular Technology: 4G, 5G ,LTE";
+        info.appendChild(cellcular);
 
         let ram = document.createElement("p");
         ram.textContent = "Ram Memory Installed Size: 16G";
@@ -162,29 +162,37 @@ function createDetails(){
 
         let btn_add = document.createElement("button");
         btn_add.id = "addto-card";
-        btn_add.textContent = "ADD TO CARD++";
-        btn_add.addEventListener("click", onAddCard)
-        btn_add.dataset.index = index;
         user_click.appendChild(btn_add);
 
+        let link_card = document.createElement("a");
+        link_card.href = "mycard.html";
+        link_card.textContent = "ADD TO CARD++";
+        link_card.addEventListener("click", onAddCard);
+        link_card.dataset.index = index;
+        btn_add.appendChild(link_card)
+    }
+}
+function savePhone() {
+    localStorage.setItem("savecards", JSON.stringify(savecards));
+}
+  
+function loadPhone() {
+    let productStorage = JSON.parse(localStorage.getItem("savecards"));
+    if (productStorage !== null) {
+      savecards = productStorage;
     }
 }
 
-function saveIndex(index) {
-
-    savecards.push(list_phones[index])
-    localStorage.setItem("savecards", JSON.stringify(savecards));
-    console.log(savecards);
-}
-
 function onAddCard(event){
+    savecards = JSON.parse(localStorage.getItem("savecards"));
 
     let index = event.target.dataset.index;
-    console.log(index);
-
-    saveIndex(index);
+    savecards.push(list_phones[index]);
+    localStorage.setItem("savecards", JSON.stringify(savecards));
+    
 }
-
+savePhone();
+loadPhone();
 createDetails();
 
 let btn_cancel = document.querySelector("#cancelbuy");
@@ -192,9 +200,3 @@ btn_cancel.addEventListener("click", onCancel);
 
 let btn_buyit = document.querySelector("#buynewPhone");
 btn_buyit.addEventListener("click", buyyourPhone);
-
-// let addcard = document.querySelector("#addto-card");
-// addcard.addEventListener("click", onAddCard);
-
-// let click_buy = dom_detail_info.querySelector("#buy-phone");
-// click_buy.addEventListener("click", show);
