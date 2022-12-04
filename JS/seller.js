@@ -1,4 +1,3 @@
-//dome element
 const dom_products_view = document.querySelector(".products-view");
 
 const dom_questions_dialog = document.querySelector("#editProducts-dialog");
@@ -7,7 +6,6 @@ const dom_adjustProduct_dialog = document.querySelector("#adjust-products-dialog
 
 const dom_delete_dialog = document.querySelector("#delete-dialog");
 
-//data
 let products = [
     {
         brandname: "Apple",
@@ -157,8 +155,6 @@ let products = [
 
 let indexItem = products.length;
 
-//function show and hide element
-
 function hide(element) {
     element.style.display = "none";
 }
@@ -167,7 +163,6 @@ function show(element) {
     element.style.display = "block";
 }
 
-//add to localStorage
 function savePhone() {
     localStorage.setItem("products", JSON.stringify(products));
 }
@@ -180,16 +175,12 @@ function loadPhone() {
 }
 
 function renderPhone() {
-    // Remove the card container and create a new one
-
     document.querySelector(".product-display").remove();
   
     dom_products_display = document.createElement("div");
     dom_products_display.className = "product-display";
   
     dom_products_view.appendChild(dom_products_display);
-  
-    // For all phone,  create a new div and append it the container
 
     for (let index = 0; index < products.length; index++) {
         let product = products[index];
@@ -253,21 +244,16 @@ function renderPhone() {
     }
 }
 function editPhone(event) {
-    // Get the index using the dataset
 
     let index = event.target.parentElement.parentElement.dataset.index;
     let product = products[index];
 
     indexItem = index;
-    // update the dialog with phone informatin
-
     document.querySelector("#brand").value = product.brandname;
     document.querySelector("#model").value = product.model;
     document.querySelector("#price").value = product.price;
     document.querySelector("#storage").value = product.storage;
     document.querySelector("#photo").value = product.photoimage;
-
-    // Show the dialog
 
     show(dom_adjustProduct_dialog);
     document.querySelector("#addnewPhone").textContent = "Update";
@@ -284,20 +270,14 @@ function askQuestion() {
 }
 
 function removePhone(event) {
-    //  Get index
-  
     let index = event.target.parentElement.parentElement.dataset.index;
-
-    // Remove question
 
     products.splice(index, 1);
 
     hide(dom_delete_dialog);
 
-    // Save to local storage
     savePhone();
 
-    // Update the view
     renderPhone();
 }
 
