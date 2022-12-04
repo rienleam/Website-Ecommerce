@@ -15,6 +15,7 @@ function createPhoneList() {
         to_details.className = "to-details";
         to_details.href = "detail.html";
         to_details.dataset.index = index;
+        to_details.addEventListener("click", onClick)
         dom_phones_container.appendChild(to_details);
 
         let phone_link = document.createElement("a");
@@ -57,13 +58,14 @@ function createPhoneList() {
         let total_rate = document.createElement("p");
         total_rate.id = "total-rate";
         total_rate.textContent = "456,906";
-        phone_rate.appendChild(total_rate);
-
-        let quantity = document.createElement("p");
-        quantity.id = "quantity";
-        quantity.textContent = "Quantity: " + phone.quantity;
-        phone_info.appendChild(quantity);
-        
+        phone_rate.appendChild(total_rate);        
     }
+}
+function onClick(event) {
+
+    let index = event.target.parentElement.parentElement.dataset.index;
+    phonetodetails.push(listphone[index]);
+    localStorage.setItem("phonetodetails", JSON.stringify(phonetodetails));
+
 }
 createPhoneList();

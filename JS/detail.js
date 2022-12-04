@@ -35,6 +35,7 @@ function onCancel() {
         input.style.border = "2px solid gray";
     }
 }
+
 function buyyourPhone() {
     let checked_input = first_name.value && last_name.value && email.value && phone_num.value && address.value && card.value && nameoncard.value && numbercard.value && securitycode.value;
     let check_value = [first_name, last_name, email, phone_num, address, card, nameoncard, numbercard, securitycode];
@@ -63,6 +64,7 @@ function buyyourPhone() {
         onCancel();
     }    
 }
+
 function createDetails(){
 
     dom_detail_info = document.querySelector(".each-phones");
@@ -191,7 +193,7 @@ function onAddCard(event){
     localStorage.setItem("savecards", JSON.stringify(savecards));
     
 }
-savePhone();
+// savePhone();
 loadPhone();
 createDetails();
 

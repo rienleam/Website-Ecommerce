@@ -16,8 +16,9 @@
             <div class="logo">
                 <img src="../Image/mynewlogo.png">
                 <div class="manupage">
-                    <p><a href="customer.html">Customer</a></p>
+                    
                     <p><a class="active" href="seller.html">Seller</a></p>
+                    <p><a href="customer.html">Customer</a></p>
                     
                 </div>
             </div>
@@ -34,7 +35,7 @@
     </aside>
     <div id="adjust-products-dialog" style="display: none;">
         <div class="dialog-container">
-            <dialog open>
+            <dialog id="dialog-create" open>
                 <h1 id="form-title">Add new Phone</h1>
                 <section>
                     <div class="userinput-brand">
@@ -71,7 +72,6 @@
                     </div>
                     <div class="userinput-photo">
                         <label>Phone Image:</label>
-                        <!-- <input id="photo" type="file" placeholder="Input phone's picture" required/> -->
                         <input id="photo" type="text" placeholder="Input phone's image address" required/>
                     </div>
                 </section>
@@ -99,6 +99,17 @@
                     </div>
                 </div>
             </div> -->
+        </div>
+    </div>
+    <div id="delete-dialog" style="display: none;">
+        <div class="delete-container">
+            <dialog id="dialog-delete" open>
+                <h2 id="question">Do you want to delete this phone?</h2>
+                <div class="choice-click">
+                    <button id="not-delete">No</button>
+                    <button id="yes-delete">Yes</button>
+                </div>
+            </dialog>
         </div>
     </div>
     <footer>

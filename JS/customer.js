@@ -5,6 +5,9 @@ let dom_phones_container = document.querySelector(".main-content");
 let dom_searchinput = document.querySelector("#search");
 dom_searchinput.addEventListener("keyup", searchPhone);
 
+let dom_sortby = document.querySelector("#sort");
+dom_sortby.addEventListener("click", sortbyPhone);
+
 let phonetodetails = [];
 
 function createPhoneList() {
@@ -83,6 +86,25 @@ function searchPhone() {
 
         let phone = allphones[i];
         let inputText = dom_searchinput.value.toLocaleLowerCase();
+        let name = phone.lastChild.firstChild.textContent.toLocaleLowerCase();
+
+        if (name.includes(inputText)) {
+            phone.style.display = "block";
+            // console.log(name);
+            // console.log(inputText);
+        }
+        else {
+            phone.style.display = "none";
+        }
+    }
+}
+function sortbyPhone() {
+
+    let allphones = document.querySelectorAll(".to-details");
+    for (let i = 0; i < allphones.length; i++) {
+
+        let phone = allphones[i];
+        let inputText = dom_sortby.value.toLocaleLowerCase();
         let name = phone.lastChild.firstChild.textContent.toLocaleLowerCase();
 
         if (name.includes(inputText)) {

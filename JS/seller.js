@@ -5,6 +5,8 @@ const dom_questions_dialog = document.querySelector("#editProducts-dialog");
 
 const dom_adjustProduct_dialog = document.querySelector("#adjust-products-dialog");
 
+const dom_delete_dialog = document.querySelector("#delete-dialog");
+
 //data
 let products = [
     {
@@ -242,7 +244,7 @@ function renderPhone() {
         let deleteAction = document.createElement("button");
         deleteAction.id = "delete";
         deleteAction.textContent = "Delete";
-        deleteAction.addEventListener("click", removePhone);
+        deleteAction.addEventListener("click", askQuestion);
         delete_update.appendChild(deleteAction);
 
         main_content.appendChild(product_info);
@@ -274,6 +276,13 @@ function editPhone(event) {
     products.splice(index, 1);
 }
 
+function onNoDelete () {
+    hide(dom_delete_dialog);
+}
+function askQuestion() {
+    show(dom_delete_dialog);
+}
+
 function removePhone(event) {
     //  Get index
   
@@ -282,6 +291,8 @@ function removePhone(event) {
     // Remove question
 
     products.splice(index, 1);
+
+    hide(dom_delete_dialog);
 
     // Save to local storage
     savePhone();
@@ -370,3 +381,9 @@ concel_click.addEventListener("click", onCancel);
 
 let update_click = dom_adjustProduct_dialog.querySelector("#addnewPhone");
 update_click.addEventListener("click", onCreatPhone);
+
+let not_delete = dom_delete_dialog.querySelector("#not-delete");
+not_delete.addEventListener("click", onNoDelete);
+
+let yes_delete = dom_delete_dialog.querySelector("#yes-delete");
+yes_delete.addEventListener("click", removePhone);

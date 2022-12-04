@@ -20,7 +20,7 @@ aside button{
   border: none;
   border-radius: 5px;
 }
-.dialog-container {
+.dialog-container ,.delete-container{
   position: fixed;
   top: 0;
   left: 0;
@@ -29,7 +29,7 @@ aside button{
   background-color: rgba(34, 34, 34, 0.75);
   z-index: 10;
 }
-dialog {
+#dialog-create{
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -111,7 +111,7 @@ input{
 }
 .main-content {
   width: 85%;
-  height: 100px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -134,10 +134,10 @@ input{
   justify-content: flex-start;
   align-items: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 20px;
+  font-size: 17px;
 }
 #picture {
-  width: 100px;
+  width: 90px;
   border-radius: 10px;
 }
 .infor {
@@ -166,8 +166,50 @@ input{
   margin: 7px;
   border-radius: 10px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 20px;
+  font-size: 17px;
 }
 #delete {
   background-color: red;
+}
+
+.adjust button:hover {
+  background-color: rgb(212, 139, 2);
+}
+#delete:hover {
+  background-color: rgb(212, 139, 2);
+
+}
+#dialog-delete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 250px;
+  width: 60%;
+  height: 30px;
+  z-index: 100;
+  border-radius: 10px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  padding: 30px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: rgb(223, 234, 234);
+}
+.choice-click {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+.choice-click button {
+  background-color: orange;
+  color: white;
+  font-size: 20px;
+  padding: 10px 45px;
+  border: none;
+  border-radius: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.choice-click button:hover{
+  background-color: rgb(212, 139, 2);
 }
