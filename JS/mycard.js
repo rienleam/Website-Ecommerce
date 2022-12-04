@@ -24,7 +24,7 @@ function createPhoneList() {
 
         let phone_image = document.createElement("img");
         phone_image.id = "photo";
-        phone_image.src = phone.photoimage;
+        phone_image.src = "../" + phone.photoimage;
         phone_link.appendChild(phone_image);
 
         let phone_info = document.createElement("div");

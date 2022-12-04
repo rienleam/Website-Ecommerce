@@ -85,7 +85,7 @@ function createDetails(){
 
         let phone_image = document.createElement("img");
         phone_image.id = "pic";
-        phone_image.src = phone.photoimage;
+        phone_image.src = "../" + phone.photoimage;
         phone_pic.appendChild(phone_image);
 
         let title = document.createElement("h1");
