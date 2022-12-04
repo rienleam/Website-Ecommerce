@@ -174,9 +174,6 @@ function createDetails(){
         btn_add.appendChild(link_card)
     }
 }
-function savePhone() {
-    localStorage.setItem("savecards", JSON.stringify(savecards));
-}
   
 function loadPhone() {
     let productStorage = JSON.parse(localStorage.getItem("savecards"));
@@ -193,7 +190,6 @@ function onAddCard(event){
     localStorage.setItem("savecards", JSON.stringify(savecards));
     
 }
-// savePhone();
 loadPhone();
 createDetails();
 
