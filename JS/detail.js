@@ -174,13 +174,6 @@ function createDetails(){
         btn_add.appendChild(link_card)
     }
 }
-  
-function loadPhone() {
-    let productStorage = JSON.parse(localStorage.getItem("savecards"));
-    if (productStorage !== null) {
-      savecards = productStorage;
-    }
-}
 
 function onAddCard(event){
     savecards = JSON.parse(localStorage.getItem("savecards"));
@@ -190,7 +183,7 @@ function onAddCard(event){
     localStorage.setItem("savecards", JSON.stringify(savecards));
     
 }
-loadPhone();
+
 createDetails();
 
 let btn_cancel = document.querySelector("#cancelbuy");
