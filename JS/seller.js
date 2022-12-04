@@ -14,7 +14,7 @@ let products = [
         model: "Iphone 11",
         price: 600,
         storage: 64,
-        photoimage: "../Image/iphone11.jfif",
+        photoimage: "Image/iphone11.jfif",
         quantity: 1
     },
     {
@@ -22,7 +22,7 @@ let products = [
         model: "Iphone 12",
         price: 670,
         storage: 128,
-        photoimage: "../Image/iphone12.jfif",
+        photoimage: "Image/iphone12.jfif",
         quantity: 1
     },
     {
@@ -30,7 +30,7 @@ let products = [
         model: "Iphone 13",
         price: 750,
         storage: 512,
-        photoimage: "../Image/iphone13.jpg",
+        photoimage: "Image/iphone13.jpg",
         quantity: 1
     },
     {
@@ -38,7 +38,7 @@ let products = [
         model: "Iphone 14 Pro Max",
         price: 950,
         storage: 512,
-        photoimage: "../Image/iphone14promax.jpg",
+        photoimage: "Image/iphone14promax.jpg",
         quantity: 1
     },
     {
@@ -46,7 +46,7 @@ let products = [
         model: "Huawei Nova 10 Pro",
         price: 650,
         storage: 256,
-        photoimage: "../Image/huaweinova10pro.jpg",
+        photoimage: "Image/huaweinova10pro.jpg",
         quantity: 1
     },
     {
@@ -54,7 +54,7 @@ let products = [
         model: "Huawei Nova 9",
         price: 550,
         storage: 128,
-        photoimage: "../Image/hueweinova9.jpg",
+        photoimage: "Image/hueweinova9.jpg",
         quantity: 1
     },
     {
@@ -62,7 +62,7 @@ let products = [
         model: "Nokia G50",
         price: 470,
         storage: 64,
-        photoimage: "../Image/nokiag50.jpg",
+        photoimage: "Image/nokiag50.jpg",
         quantity: 1
     },
     {
@@ -70,7 +70,7 @@ let products = [
         model: "Oppo A21",
         price: 590,
         storage: 128,
-        photoimage: "../Image/oppoa12.jpg",
+        photoimage: "Image/oppoa12.jpg",
         quantity: 1
     },
     {
@@ -78,7 +78,7 @@ let products = [
         model: "Oppo F21 Pro",
         price: 620,
         storage: 128,
-        photoimage: "../Image/oppof21pro.jpg",
+        photoimage: "Image/oppof21pro.jpg",
         quantity: 1
     },
     {
@@ -86,7 +86,7 @@ let products = [
         model: "Sumsung A52 5G",
         price: 720,
         storage: 256,
-        photoimage: "../Image/sumsunga52.jpg",
+        photoimage: "Image/sumsunga52.jpg",
         quantity: 1
     },
     {
@@ -94,7 +94,7 @@ let products = [
         model: "Sumsung M13 5G",
         price: 780,
         storage: 256,
-        photoimage: "../Image/sumsungm13.jpg",
+        photoimage: "Image/sumsungm13.jpg",
         quantity: 1
     },
     {
@@ -102,7 +102,7 @@ let products = [
         model: "Xiaomi 11T",
         price: 580,
         storage: 128,
-        photoimage: "../Image/xiaomi11t.jpg",
+        photoimage: "Image/xiaomi11t.jpg",
         quantity: 1
     },
     {
@@ -110,7 +110,7 @@ let products = [
         model: "Xiaomi 12 Pro",
         price: 720,
         storage: 256,
-        photoimage: "../Image/xiaomi12pro.jpg",
+        photoimage: "Image/xiaomi12pro.jpg",
         quantity: 1
     },
     {
@@ -118,7 +118,7 @@ let products = [
         model: "Redmi Note 10 Pro",
         price: 890,
         storage: 512,
-        photoimage: "../Image/xiaomiredminote10pro.jpg",
+        photoimage: "Image/xiaomiredminote10pro.jpg",
         quantity: 1
     },
     {
@@ -126,7 +126,7 @@ let products = [
         model: "Vivo X60 Pro",
         price: 780,
         storage: 256,
-        photoimage: "../Image/vivox60pro.jpg",
+        photoimage: "Image/vivox60pro.jpg",
         quantity: 1
     },
     {
@@ -134,7 +134,7 @@ let products = [
         model: "Vivo X60t",
         price: 710,
         storage: 256,
-        photoimage: "../Image/vivox60t.jpg",
+        photoimage: "Image/vivox60t.jpg",
         quantity: 1
     },
     {
@@ -142,7 +142,7 @@ let products = [
         model: "Vivo 73t",
         price: 670,
         storage: 128,
-        photoimage: "../Image/vivoy73t.jpg",
+        photoimage: "Image/vivoy73t.jpg",
         quantity: 1
     },
     {
@@ -150,7 +150,7 @@ let products = [
         model: "Vivo Y74s",
         price: 700,
         storage: 128,
-        photoimage: "../Image/vivoy74s.jpg",
+        photoimage: "Image/vivoy74s.jpg",
         quantity: 1
     }
 ]
