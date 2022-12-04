@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer page</title>
+    <title>Card page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/customer.css">
-    <script defer src="../JS/customer.js"></script>
+    <link rel="stylesheet" href="../css/mycard.css">
+    <script defer src="../JS/mycard.js"></script>
 </head>
 <body>
     <nav>
@@ -17,47 +17,28 @@
                 <img src="../Image/mynewlogo.png">
                 <div class="manupage">
                     
-                    <p><a  href="../index.html">Seller</a></p>
-                    <p><a class="active" href="customer.html">Customer</a></p>
+                    <p><a href="../index.html">Seller</a></p>
+                    <p><a href="customer.html">Customer</a></p>
                     
                 </div>
             </div>
         </div>
         <div class="nav-right">
-            <a href="mycard.html"><i class="fa fa-cart-plus"></i>My Card</a>
+            <a class="active" href="mycard.html"><i class="fa fa-cart-plus"></i>My Card</a>
             <img src="../Image/profile.jpg">
         </div>
     </nav>
-    <div class="search-bar">
-        <div class="backgr">
-            <img id="logoshop" src="../Image/mynewlogo.png">
-        </div>
-        <div class="search">
-            <div class="search-input">
-                <input id="search" type="text" placeholder="Enter phone brand you're looking for">
-                <button><img src="../Image/searhicon.png"></button>
-            </div>
-            <div class="sort-by">
-                <select name="sort" id="sort">
-                    <option value="" selected disabled>Sort-by</option>
-                    <option value="Apple">Apple</option>
-                    <option value="Sumsung">Sumsung</option>
-                    <option value="Xiaomi">Xiaomi</option>
-                    <option value="Oppo">Oppo</option>
-                    <option value="Vivo">Vivo</option>
-                    <option value="Huawei">Huawei</option>
-                    <option value="Nokia">Nokia</option>
-                </select>
-            </div>
-        </div>
+    <div class="card-container">
+        <h1>Phones in your card</h1>
+        <a id="add-more" href="customer.html"><button id="clickadd">Add More ++</button></a>
     </div>
     <div class="main-content">
         <div class="display-phonelist">
             <!-- <a class="to-details" href="">
                 <a id="link-pic" href="detail.html"><img id="photo" src="../Image/iphone14promax.jpg"></a>
                 <div class="phone-info">
-                    <h3 id="brand">Apple</h3>!!!!!
-                    <h3 id="model">Iphone 14 pro</h3>
+                    <h3 id="brand">Apple</h3>
+                    <h4 id="model">Iphone 14 pro</h4>
                     <h3 id="price">$650.00</h3>
                     <div class="rate">
                         <img id="star" src="../Image/rateStar.png">

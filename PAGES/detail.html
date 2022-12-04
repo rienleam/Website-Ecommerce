@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/detail.css">
+    <script defer src="../JS/detail.js"></script>
+</head>
+<body>
+    <div class="back">
+        <a href="customer.html"><button id="backto-customer">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <p>All phones</p>
+        </button></a>
+        <a href="mycard.html"><button id="backto-card">My Card</button></a>
+    </div>
+    <div class="list-phone-detail">
+        <div class="each-phones">
+            <!-- <div class="phone-detail">
+                <div class="phone-pic">
+                    <img id="pic" src="../Image/iphone14promax.jpg">
+                    <h1 class="phone-name">Iphone14 Pro Max</h1>
+                </div>
+                <div class="phone-information">
+                    <div class="info">
+                        <h1>Iphone 14 Pro Max</h1>
+                        <p>Brand Name: Apple</p>
+                        <p>Model Name: Iphone 14 Pro Max</p>
+                        <p>Price: $950</p>
+                        <p>Memory Storage Capacity: 512G</p>
+                        <p>Cellular Technology: 4G, 5G ,LTE</p>
+                        <p>Ram Memory Installed Size: 16G</p>
+                        <p>Warranty period: 1 Year</p>
+                    </div>
+                    <div class="buy-add">
+                        <div class="star-rate">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p id="rating">456,906</p>
+                        </div>
+                        <div class="user-click">
+                            <button id="buy-phone">BUY NOW</button>
+                            <button id="addto-card">ADD TO CARD++</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="whenbuy-dialog" style="display: none;">
+        <dialog open>
+                <h2 id="form-buy">Complete Your information to Buy Phone</h2>
+                <section>
+                    <div class="userinput-name">
+                        <label>Name:</label>
+                        <div class="inputname">
+                            <input id="first-name" type="text" placeholder="Enter your first-name" required>
+                            <input id="last-name" type="text" placeholder="Enter your last-name" required>
+                        </div>
+                    </div>
+                    <div class="userinput-email">
+                        <label>Email:</label>
+                        <input id="email" type="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="userinput-phone">
+                        <label>Phone number:</label>
+                        <input id="phone-num" type="number" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="userinput-address">
+                        <label>Address:</label>
+                        <input id="address" type="text" placeholder="Enter your current address" required>
+                    </div>
+                    <div class="userinput-card">
+                        <label>Payment:</label>
+                        <select name="card" id="card" required>
+                            <option value="" selected disabled>Select your Payment</option>
+                            <option value="Visa">Visa</option>
+                            <option value="AmEx">AmEx</option>
+                            <option value="Mastercard">Mastercard</option>
+                            <option value="Acelida">Acelida</option>
+                            <option value="Bakong">Bakong</option>
+                            <option value="Wing">Wing</option>
+                        </select>
+                    </div>
+                    <div class="name-card">
+                        <label>Name on card:</label>
+                        <input id="nameoncard" type="text" placeholder="Enter your name on card" required>
+                    </div>
+                    <div class="card-number">
+                        <label>Card numbers:</label>
+                        <input id="numbercard" type="number" placeholder="Enter your card number" required>
+                    </div>
+                    <div class="security">
+                        <label>Security code:</label>
+                        <input id="securitycode" type="number" placeholder="Enter your security code" required>
+                    </div>
+                </section>
+                <div class="choice">
+                    <button id="cancelbuy">CANCEL</button>
+                    <button id="buynewPhone" type="submit">BUY IT!</button> 
+                </div>
+        </dialog>
+    </div>
+    <footer>
+        <div class="foot">
+            <h3>Contact Us</h3>
+            <span><b>Tell:</b> +885977348624</span>
+            <span><b>Working time:</b> 24h</span>
+            <span><b>Address:</b> BP 511, Phum Tropeang Chhuk (Borey Sorla) Sangtak, Street 371, Phnom Penh</span>
+        </div>
+        <div class="foot">
+            <h3>Shop</h3>
+            <span><a href="">About Rien Phone Shop</a></span>
+            <span><a href="">Contact Us</a></span>
+            <span><a href="">Our partners</a></span>
+        </div>
+        <div class="foot">
+            <h3>Follow Us</h3>
+            <div class="follow">
+                <img src="../Image/facebook.png">
+                <img src="../Image/instargram.png">
+                <img src="../Image/youtube.png">
+                <img src="../Image/twitter.png">
+                <img src="../Image/in.png">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,214 @@
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.back {
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    height: 90px;
+    display: flex;
+    top: 0;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+}
+.back a {
+    text-decoration: none;
+    margin-left: 35px;
+}
+.back button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: orange;
+    color: white;
+}
+#backto-customer p{
+    padding: 0px 10px;
+}
+#backto-card{
+    padding: 15px 35px;
+    margin-right: 40px;
+}
+.each-phones:nth-child(1){
+    margin-top: 90px;
+}
+
+.phone-detail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.phone-pic {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(70, 173, 173);
+    padding: 30px;
+    border-radius: 10px;
+}
+#pic {
+    width: 100%;
+    border-radius: 10px;
+}
+.phone-name {
+    margin: 0;
+    margin-top: 20px;
+    color: white;
+}
+.phone-model {
+    font-size: 25px;
+}
+.phone-information {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(148, 212, 212);
+    border-radius: 0px 10px 10px 0px;
+    padding: 20px 40px ;
+}
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.info h1{
+    margin: 0;
+    margin: 10px 0px 5px 0px;
+}
+.info p{
+    margin: 0;
+    font-size: 20px;
+    padding-top: 15px;
+}
+.buy-add {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.star-rate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#rating {
+    margin-left: 5px;
+    font-size: 20px;
+}
+.star-rate i {
+    color: orange;
+    margin-right: 5px;
+}
+.user-click button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    font-size: 15px;
+    margin-left: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#addto-card a{
+    text-decoration: none;
+    color: white;
+}
+
+.whenbuy-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0.75);
+    z-index: 10;
+  }
+  dialog {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 20px;
+    width: 55%;
+    height: 520px;
+    z-index: 100;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding: 30px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: rgb(223, 234, 234);
+  }
+#form-buy {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 15px;
+}
+label {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+input , select{
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 7px;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.userinput-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-card, .card-number, .security, .inputname, .userinput-email, .userinput-phone, .userinput-address, .userinput-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inputname {
+    width: 80%;
+    flex-wrap: wrap;
+}
+#first-name, #last-name{
+    width: 100%;
+}
+#nameoncard, #numbercard, #securitycode, #email, #phone-num, #address, #card{
+    width: 80%;
+}
+.choice {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.choice button {
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: orange;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#cancelbuy {
+    margin-right: 20px;
+}

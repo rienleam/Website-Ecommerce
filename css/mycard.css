@@ -1,0 +1,82 @@
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 90px;
+}
+#clickadd {
+    padding: 15px 30px;
+    background-color: orange;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.main-content {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.display-phonelist {
+    width: 100%;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.to-details {
+    width: 15%;
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(119, 177, 177);
+    margin: 15px;
+    margin-top: 40px;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.to-details:hover{
+    background-color: rgb(78, 191, 191); 
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);  
+}
+#photo {
+    width: 100%;
+    border-radius: 10px;
+}
+.phone-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.phone-info h2, h4{
+    margin: 0;
+    margin-top: 10px;
+    color: rgb(34, 74, 74);
+}
+#price {
+    margin: 0;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 35px;
+    color: black;
+}
+.rate {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.rate img{
+    width: 100px;
+    height: 25px;
+}
